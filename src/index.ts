@@ -1,4 +1,5 @@
 import express, { Application, Request, Response } from "express";
+import threeBallTricks from "./threeBallTricks.json";
 
 const app: Application = express();
 let port = process.env.PORT;
@@ -9,19 +10,21 @@ if (port == null || port == "") {
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-requested-With, Content-Type, Accept"
-  );
-});
 
 app.get("/", async (req: Request, res: Response): Promise<Response> => {
   return res.status(200).send({
     message: "Hello",
   });
 });
+
+app.get(
+  "/all-tricks",
+  async (req: Request, res: Response): Promise<Response> => {
+    return res.status(200).send({
+      threeBallTricks,
+    });
+  }
+);
 
 try {
   app.listen(port, (): void => {
