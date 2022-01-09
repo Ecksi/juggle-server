@@ -1,0 +1,72 @@
+[
+    {
+      "id": 0,
+      "balls": 3,
+      "name": "Cascade",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/3ballcascade.gif",
+      "prereq": []
+    },
+    {
+      "id": 1,
+      "balls": 3,
+      "name": "Over Throw",
+      "prereq": [0]
+    },
+    {
+      "id": 2,
+      "balls": 3,
+      "name": "Jugglers Tennis",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/jugglerstennis.gif",
+      "prereq": [0,1]
+    },
+    {
+      "id": 3,
+      "balls": 3,
+      "name": "Half Shower",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/halfshower.gif",
+      "prereq": [1]
+    },
+    {
+      "id": 4,
+      "balls": 3,
+      "name": "Reverse Cascade",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/reversecascade.gif",
+      "prereq": [1]
+    },
+    {
+      "id": 5,
+      "balls": 3,
+      "name": "Columns",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/columnsonehand.gif",
+      "prereq": []
+    },
+    {
+      "id": 6,
+      "balls": 3,
+      "name": "4-2-3",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/423.gif",
+      "prereq": []
+    },
+    {
+      "id": 7,
+      "balls": 3,
+      "name": "Shower",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/shower.gif",
+      "prereq": [3,9]
+
+    },
+    {
+      "id": 8,
+      "balls": 3,
+      "name": "5-3-1",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/531.gif",
+      "prereq": [7]
+    },
+    {
+      "id": 9,
+      "balls": 3,
+      "name": "4-4-1",
+      "animation": "https://libraryofjuggling.com/JugglingGifs/3balltricks/441.gif",
+      "prereq": [5]
+    }
+]
