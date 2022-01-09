@@ -16,9 +16,21 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+const trickRouter = require("./routes/trickRoutes")
+
+app.use("/api/v1/tricks", trickRouter)
+
 // BEGIN ROUTES
 // --------------
 // Get All Tricks
+
+app.get('/', (req, res) =>{
+  console.log("here meow")
+  res.status(200).json({message: "rawr"})
+})
+
+
 app.get("/tricks", async (req: Request, res: Response) => {
   try {
     const allTricks = await pool.query("SELECT * FROM tricks");
